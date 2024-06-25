@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: ipv4check
+
+# or
+# kubectl create namespace ipv4check

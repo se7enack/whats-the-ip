@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ipv4check
+  namespace: ipv4check
+  labels:
+    app: ipv4check
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ipv4check
+  template:
+    metadata:
+      labels:
+        app: ipv4check
+    spec:
+      imagePullSecrets:
+      - name: secretspw
+      containers:
+      - name: ipv4check
+        image: ipv4check:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "1"
+            memory: 512M
+          requests:
+            cpu: "1"
+            memory: 128M
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 60
+          periodSeconds: 5
+          timeoutSeconds: 2        
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2        
