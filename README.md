@@ -73,7 +73,7 @@ ipify-like endpoint used for checking public ipv4 ip addresses
 
 #### plain text:
 ```
-curl -L https://ipv4check.getburke.com
+curl -L ipv4check.getburke.com
 
 
 12.34.56.78
@@ -83,7 +83,7 @@ ____
 
 #### json:
 ```
-curl -L https://ipv4check.getburke.com/?format=json
+curl -L ipv4check.getburke.com/?format=json
 
 
 {"ip":"12.34.56.78"}
@@ -93,7 +93,7 @@ ____
 
 #### xml:
 ```
-curl -L https://ipv4check.getburke.com/?format=xml
+curl -L ipv4check.getburke.com/?format=xml
 
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -104,7 +104,7 @@ ___
 
 #### yaml:
 ```
-curl -L https://ipv4check.getburke.com/?format=yaml
+curl -L ipv4check.getburke.com/?format=yaml
 
 ---
 ip: 12.34.56.78
