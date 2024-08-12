@@ -110,3 +110,8 @@ curl -L ipv4check.getburke.com/?format=yaml
 ip: 12.34.56.78
 ```
 ____
+
+
+Live Example: https://ipv4ip.com
+
+ 
