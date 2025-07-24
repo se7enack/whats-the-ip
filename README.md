@@ -96,7 +96,6 @@ ____
 curl -L https://ipv4ip.com/?format=xml
 
 
-<?xml version="1.0" encoding="UTF-8" ?>
 <ip>12.34.56.78</ip>
 ```
 ___
